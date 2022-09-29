@@ -19,7 +19,7 @@ public class Main
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the following information to login\n" +
                 "Hint: Case sensitive");
-        System.out.println("Please enter your fist name");
+        System.out.println("Please enter your first name");
         String firstName = scanner.nextLine();
         System.out.println("Please enter your last name");
         String lastName = scanner.nextLine();
