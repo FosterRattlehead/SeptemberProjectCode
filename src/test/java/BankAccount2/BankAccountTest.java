@@ -35,4 +35,12 @@ public class BankAccountTest {
         assertEquals(50,Bank.subSpecific(amount, numSubtract));
 
     }
+
+    @Test
+    void testPrintStream(){
+        double number = 5000;
+        Bank.addList(number);
+
+        assertEquals(Bank.getList(0), number);
+    }
 }

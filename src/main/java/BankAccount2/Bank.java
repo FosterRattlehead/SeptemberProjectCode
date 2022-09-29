@@ -1,12 +1,16 @@
 package BankAccount2;
 
+import java.io.PrintStream;
+import java.util.ArrayList;
+
 public class Bank {
+    private static ArrayList<Double> list = new ArrayList<>();
 
     // method to subtract 100 from account balance
     public static double subHundred(double balance) {
 
         balance += UserInterface.preBuiltOptions[1][0];
-        return balance ;
+        return balance;
     }
 
     // method to subtract 1000 from account balance
@@ -22,6 +26,7 @@ public class Bank {
         balance = (balance - amount);
         return balance;
     }
+
     // method to add 100 to account balance
     public static double addHundred(double balance) {
 
@@ -43,5 +48,22 @@ public class Bank {
         return balance;
     }
 
+    public static PrintStream printList() {
+
+        System.out.println("Balance History: ");
+        for (int i = 0; i < list.size(); i++)
+            System.out.println(list.get(i));
+
+        return System.out;
+    }
+
+    public static void addList(double num) {
+        list.add(Double.valueOf(num));
+
+    }
+    public static Double getList(int i) {
+        return list.get(i);
+
+    }
 
 }

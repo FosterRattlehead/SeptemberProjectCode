@@ -1,5 +1,7 @@
 package BankAccount2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,6 +10,7 @@ public class UserInterface extends Bank {
 
     public static void main(String[] args)
     {
+        //ArrayList<Double> list = new ArrayList<Double>();
 
          // getting the user's firstName, lastName, and email
 
@@ -49,6 +52,7 @@ public class UserInterface extends Bank {
             boolean logOut=false;
 
             System.out.println("currentBalance: " + userInfo[0]);
+            Bank.addList(userInfo[0]);
 
 
             while (!logOut)
@@ -83,8 +87,9 @@ public class UserInterface extends Bank {
                         if (userChoiceNum1 == 1)
                         {
                             userInfo[0] = Bank.addHundred(userInfo[0]);
-
                             System.out.println("currentBalance: " + userInfo[0]);
+                            Bank.addList(userInfo[0]);
+
 
                             break;
                         }
@@ -93,6 +98,7 @@ public class UserInterface extends Bank {
                         {
                             userInfo[0]= Bank.addThousand(userInfo[0]);
                             System.out.println("currentBalance: " + userInfo[0]);
+                            Bank.addList(userInfo[0]);
 
                             break;
                         }
@@ -105,6 +111,7 @@ public class UserInterface extends Bank {
 
                             userInfo[0] = Bank.addSpecific(userInfo[0], depositNum);
                             System.out.println("currentBalance: " + userInfo[0]);
+                            Bank.addList(userInfo[0]);
 
                             break;
                         }
@@ -125,6 +132,7 @@ public class UserInterface extends Bank {
                         {
                             userInfo[0] = Bank.subHundred(userInfo[0]);
                             System.out.println("currentBalance: " + userInfo[0]);
+                            Bank.addList(userInfo[0]);
 
                             // if the money in the bank goes to negative value, print the warning text
                             if(userInfo[0]<0){
@@ -140,6 +148,7 @@ public class UserInterface extends Bank {
                         {
                             userInfo[0] = Bank.subThousand(userInfo[0]);
                             System.out.println("currentBalance: " + userInfo[0]);
+                            Bank.addList(userInfo[0]);
 
                             // if the money in the bank goes to negative value, print the warning text
                             if(userInfo[0]<0){
@@ -160,6 +169,7 @@ public class UserInterface extends Bank {
 
                             userInfo[0] = Bank.subSpecific(userInfo[0], withdrawNum);
                             System.out.println("currentBalance: " + userInfo[0]);
+                            Bank.addList(userInfo[0]);
 
                             // if the money in the bank goes to negative value, print the warning text
                             if(userInfo[0]<0){
@@ -169,6 +179,13 @@ public class UserInterface extends Bank {
                             }
                             break;
                         }
+
+                        // third case where user wants to check balance history
+                    case 3:
+
+                        Bank.printList();
+
+
                 }
             }
         }
@@ -188,7 +205,8 @@ public class UserInterface extends Bank {
         System.out.println("\nPlease press\n" +
                 "0 to logout\n" +
                 "1 to add deposit\n" +
-                "2 to withdraw\n");
+                "2 to withdraw\n" +
+                "3 to check balance history\n");
     }
 
     /**
