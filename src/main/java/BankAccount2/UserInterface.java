@@ -1,7 +1,5 @@
 package BankAccount2;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -191,7 +189,7 @@ public class UserInterface extends Bank {
         }
         else
         {
-            System.out.println("Login failed try again");
+            System.out.println("Login.java failed try again");
         }
     }
     private static void loginText()
