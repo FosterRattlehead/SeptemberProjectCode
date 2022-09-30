@@ -16,12 +16,12 @@ public class BankAccountTest {
         assertEquals("John", User.getName());
         assertEquals("Doe", User.getLastName());
         assertEquals("johndoe@gmail.com", User.getEmail());
+        assertEquals(money, User.getWalletAmount());
     }
 
     @Test
     void testAddHundred()
     {
-
        double amount = 100;
 
        assertEquals(200, Bank.addHundred(amount));
