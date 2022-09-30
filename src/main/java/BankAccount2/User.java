@@ -2,26 +2,35 @@ package BankAccount2;
 
 
 public class User {
-    // a simple class to add the information that we want in our main methodd
-    private String name;
-    private String lastName;
-    private String email ;
+    // a simple class to add the information that we want in our main method
+    private static String firstName;
+    private static String lastName;
+    private static String email;
 
-    public User(String name, String lastName, String email) {
-        this.name = name;
+    private static double[] wallet;
+
+    public User(String firstName, String lastName, String email, double[] wallet)
+    {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.wallet = wallet;
     }
 
-    public String getName() {
-        return name;
+    public static String getName()
+    {
+        return firstName;
     }
 
-    public String getLastName() {
+    public static String getLastName()
+    {
         return lastName;
     }
 
-    public String getEmail() {
+    public static String getEmail()
+    {
         return email;
     }
+
+    public static double[] getWalletAmount(){return wallet;}
 }

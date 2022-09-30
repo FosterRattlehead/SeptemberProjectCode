@@ -1,9 +1,8 @@
 package BankAccount2;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankAccountTest {
 
@@ -11,15 +10,17 @@ public class BankAccountTest {
     @Test
     void testUser()
     {
-        User user = new User("John","Doe","johndoe@gmail.com");
+        double[] money = {0};
+        User user = new User("John","Doe","johndoe@gmail.com", money);
 
-        assertEquals("John", user.getName());
-        assertEquals("Doe", user.getLastName());
-        assertEquals("johndoe@gmail.com", user.getEmail());
+        assertEquals("John", User.getName());
+        assertEquals("Doe", User.getLastName());
+        assertEquals("johndoe@gmail.com", User.getEmail());
     }
 
     @Test
-    void testAddHundred(){
+    void testAddHundred()
+    {
 
        double amount = 100;
 
@@ -27,7 +28,8 @@ public class BankAccountTest {
     }
 
     @Test
-    void testSubSpecific(){
+    void testSubSpecific()
+    {
 
         double amount = 100;
         double numSubtract =50;
@@ -37,7 +39,8 @@ public class BankAccountTest {
     }
 
     @Test
-    void testPrintStream(){
+    void testPrintStream()
+    {
         double number = 5000;
         Bank.addList(number);
 

@@ -1,12 +1,10 @@
 package BankAccount2;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 
-public class UserInterface extends Bank {
+public class UnusedBackend extends Bank {
 
     public static void main(String[] args)
     {
@@ -23,14 +21,15 @@ public class UserInterface extends Bank {
         String lastName = scanner.nextLine();
         System.out.println("Please enter your email address");
         String userEmail = scanner.nextLine();
+        double[] wallet = {0.0};
 
         //creating a bank account with user information
 
-        User user = new User(firstName,lastName,userEmail);
+        User user = new User(firstName,lastName,userEmail, wallet);
 
         // if methods return stored user information, begin the code
 
-        if (firstName.equals(user.getName())&&lastName.equals(user.getLastName())&&userEmail.equals(user.getEmail()))
+        if (firstName.equals(User.getName())&&lastName.equals(user.getLastName())&&userEmail.equals(user.getEmail()))
         {
             loginText();
             System.out.println("Hello "+ user.getName()+"!");
@@ -191,7 +190,7 @@ public class UserInterface extends Bank {
         }
         else
         {
-            System.out.println("Login failed try again");
+            System.out.println("Login.java failed try again");
         }
     }
     private static void loginText()
