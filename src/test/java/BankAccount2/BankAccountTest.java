@@ -10,7 +10,8 @@ public class BankAccountTest {
     @Test
     void testUser()
     {
-        User user = new User("John","Doe","johndoe@gmail.com");
+        double[] money = {0};
+        User user = new User("John","Doe","johndoe@gmail.com", money);
 
         assertEquals("John", User.getName());
         assertEquals("Doe", User.getLastName());

@@ -13,20 +13,9 @@ public class UserInterfaceJavaFX extends Application
     @Override
     public void start(Stage primaryStage)
     {
+        //sets the initial scene to the login scene and gives it a title
         primaryStage.setScene(LoginScreen.display(primaryStage));
         primaryStage.setTitle("The Totally NOT Fraudulent Bank");
         primaryStage.show();
-
-        String firstName = "John";
-        String lastName = "Doe";
-        String email = "johnDoe@example.com";
-
-        User user = new User(firstName, lastName, email);
-
-
-
-
-
-
     }
 }

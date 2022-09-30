@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class UserInterface extends Bank {
+public class UnusedBackend extends Bank {
 
     public static void main(String[] args)
     {
@@ -21,10 +21,11 @@ public class UserInterface extends Bank {
         String lastName = scanner.nextLine();
         System.out.println("Please enter your email address");
         String userEmail = scanner.nextLine();
+        double[] wallet = {0.0};
 
         //creating a bank account with user information
 
-        User user = new User(firstName,lastName,userEmail);
+        User user = new User(firstName,lastName,userEmail, wallet);
 
         // if methods return stored user information, begin the code
 

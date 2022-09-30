@@ -26,37 +26,47 @@ public class LoginScreen
                 "  (Hint: Case sensitive)");
         GridPane.setHalignment(labelHint, HPos.LEFT);
 
-        //LastName
+        //LastName text field and label
         Label labelLastName = new Label("Lastname");
         GridPane.setHalignment(labelLastName, HPos.LEFT);
         TextField textFieldLastName = new TextField();
 
-        //Firstname
+        //Firstname text field and label
         Label labelFirstName = new Label("Firstname:");
         GridPane.setHalignment(labelFirstName, HPos.LEFT);
         TextField textFieldFirstName = new TextField();
 
-
-        //Email
+        //Email text field and label
         Label labelEmail = new Label("Email:");
         GridPane.setHalignment(labelEmail, HPos.LEFT);
         TextField textFieldEmail = new TextField();
 
-        //Login Button
+        //Login Button and its supporting code
         Button buttonLogin = new Button("Login");
         GridPane.setMargin(buttonLogin, new Insets(10, 0, 0, 0));
         buttonLogin.setOnAction(e ->
         {
+            //takes the values from each textField and stores them
             String firstName = textFieldFirstName.getText();
             String lastName = textFieldLastName.getText();
             String email = textFieldEmail.getText();
+            double[] wallet = {0.0};
 
-            User newUser = new User(firstName, lastName, email);
+            //creates the user based on the information provided in the login fields
+            //the user has a default balance of 0
+            User newUser = new User(firstName, lastName, email, wallet);
 
+            //testing
+            System.out.println(firstName);
+            System.out.println(lastName);
+            System.out.println(email);
+            System.out.println(wallet[0]);
 
+            //displays the post login screen
             mainStage.setScene(PostLoginScreen.display(mainStage));
         });
 
+        //sets the positions of the elements on the GridPane
         loginPane.add(labelHint, 1, 0);
         loginPane.add(labelLastName, 0, 2);
         loginPane.add(textFieldLastName, 1, 2);

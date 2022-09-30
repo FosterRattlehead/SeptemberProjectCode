@@ -9,14 +9,14 @@ public class Bank {
     // method to subtract 100 from account balance
     public static double subHundred(double balance) {
 
-        balance += UserInterface.preBuiltOptions[1][0];
+        balance += UnusedBackend.preBuiltOptions[1][0];
         return balance;
     }
 
     // method to subtract 1000 from account balance
     public static double subThousand(double balance) {
 
-        balance += UserInterface.preBuiltOptions[1][1];
+        balance += UnusedBackend.preBuiltOptions[1][1];
         return balance;
     }
 
@@ -30,14 +30,14 @@ public class Bank {
     // method to add 100 to account balance
     public static double addHundred(double balance) {
 
-        balance += UserInterface.preBuiltOptions[0][0];
+        balance += UnusedBackend.preBuiltOptions[0][0];
         return balance;
     }
 
     // method to add 1000 to account balance
     public static double addThousand(double balance) {
 
-        balance += UserInterface.preBuiltOptions[0][1];
+        balance += UnusedBackend.preBuiltOptions[0][1];
         return balance;
     }
 
@@ -63,7 +63,6 @@ public class Bank {
     }
     public static Double getList(int i) {
         return list.get(i);
-
     }
 
 }
