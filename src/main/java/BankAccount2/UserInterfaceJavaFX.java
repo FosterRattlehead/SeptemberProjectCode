@@ -12,9 +12,17 @@ public class UserInterfaceJavaFX extends Application
     @Override
     public void start(Stage primaryStage)
     {
+        User1 user = new User1();
+        user.firstNameProperty().addListener((v, oldValue, newValue) ->
+        {
+
+        });
+
+
         primaryStage.setScene(LoginScreen.display(primaryStage));
         primaryStage.setTitle("The Totally NOT Fraudulent Bank");
         primaryStage.show();
+
 
     }
 }

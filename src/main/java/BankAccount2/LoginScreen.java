@@ -47,7 +47,6 @@ public class LoginScreen
         GridPane.setMargin(buttonLogin, new Insets(10, 0, 0, 0));
         buttonLogin.setOnAction(e ->
         {
-//            User user = new User();
             mainStage.setScene(PostLoginScreen.display(mainStage));
         });
 
