@@ -20,7 +20,7 @@ public class PostLoginScreen extends UserInterfaceJavaFX
 
         //deposit button
         Button depositButton = new Button("Deposit");
-        GridPane.setMargin(depositButton, new Insets(60, 0, 0, 0));
+        GridPane.setMargin(depositButton, new Insets(10, 10, 10, 10));
         depositButton.setOnAction(e ->
         {
             mainStage.setScene(DepositScreen.display(mainStage));
@@ -28,7 +28,7 @@ public class PostLoginScreen extends UserInterfaceJavaFX
 
         //withdrawal button
         Button withdrawButton = new Button("Withdraw");
-        GridPane.setMargin(withdrawButton, new Insets(120, 0, 0, 0));
+        GridPane.setMargin(withdrawButton, new Insets(10, 10, 10, 10));
         withdrawButton.setOnAction(e ->
         {
             mainStage.setScene(WithdrawalScreen.display(mainStage));
@@ -36,13 +36,15 @@ public class PostLoginScreen extends UserInterfaceJavaFX
 
         //logout button function
         Button buttonLogout = new Button("Logout");
-        GridPane.setMargin(withdrawButton, new Insets(160, 0, 0, 0));
+        GridPane.setMargin(withdrawButton, new Insets(10, 10, 10, 10));
         buttonLogout.setOnAction(e ->
         {
             mainStage.setScene(LoginScreen.display(mainStage));
         });
 
-        postLoginPane.getChildren().addAll(depositButton,withdrawButton,buttonLogout);
+        postLoginPane.add(depositButton, 0,0);
+        postLoginPane.add(withdrawButton,0,1);
+        postLoginPane.add(buttonLogout, 0,3);
 
         mainStage.setScene(postLoginScene);
         mainStage.setTitle("The Totally NOT Fraudulent Bank");

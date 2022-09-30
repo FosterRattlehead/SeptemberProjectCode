@@ -47,6 +47,13 @@ public class LoginScreen
         GridPane.setMargin(buttonLogin, new Insets(10, 0, 0, 0));
         buttonLogin.setOnAction(e ->
         {
+            String firstName = textFieldFirstName.getText();
+            String lastName = textFieldLastName.getText();
+            String email = textFieldEmail.getText();
+
+            User newUser = new User(firstName, lastName, email);
+
+
             mainStage.setScene(PostLoginScreen.display(mainStage));
         });
 

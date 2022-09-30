@@ -28,7 +28,7 @@ public class UserInterface extends Bank {
 
         // if methods return stored user information, begin the code
 
-        if (firstName.equals(user.getName())&&lastName.equals(user.getLastName())&&userEmail.equals(user.getEmail()))
+        if (firstName.equals(User.getName())&&lastName.equals(user.getLastName())&&userEmail.equals(user.getEmail()))
         {
             loginText();
             System.out.println("Hello "+ user.getName()+"!");
