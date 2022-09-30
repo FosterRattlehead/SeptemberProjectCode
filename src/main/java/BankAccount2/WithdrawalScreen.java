@@ -17,8 +17,8 @@ public class WithdrawalScreen extends UserInterfaceJavaFX
 
         final int[][] preBuiltOptions = new int[2][2];
         {
-        preBuiltOptions[0][0] = -100;
-        preBuiltOptions[0][1] = -1000;
+        preBuiltOptions[0][0] = 100;
+        preBuiltOptions[0][1] = 1000;
         }
 
         GridPane withdrawalPane = new GridPane();
