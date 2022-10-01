@@ -15,7 +15,7 @@ public class JavaFXMethodTests
     void testLoginButton()
     {
         JFXPanel panel = new JFXPanel();
-        edu.sdccd.cisc191.template.JavaFXComponents comp = new edu.sdccd.cisc191.template.JavaFXComponents();
+        BankAccount2.JavaFXComponents comp = new BankAccount2.JavaFXComponents();
         Button button = comp.createButton("login");
         TextField textFieldFirstName = new TextField("John");
         TextField textFieldLastName = new TextField("Doe");
