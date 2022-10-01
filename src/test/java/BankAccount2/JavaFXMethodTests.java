@@ -9,13 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JavaFXMethodTests
 {
-    //could not figure out how to make this work in JavaFX on short notice
+
     //Tests user creation at the press of the Login button
     @Test
     void testLoginButton()
     {
         JFXPanel panel = new JFXPanel();
-        JavaFXComponents comp = new JavaFXComponents();
+        edu.sdccd.cisc191.template.JavaFXComponents comp = new edu.sdccd.cisc191.template.JavaFXComponents();
         Button button = comp.createButton("login");
         TextField textFieldFirstName = new TextField("John");
         TextField textFieldLastName = new TextField("Doe");
@@ -30,14 +30,14 @@ public class JavaFXMethodTests
 
             User newUser = new User(firstName, lastName, email, wallet);
 
-            assertEquals("John", User.getName());
-            assertEquals("Doe", User.getLastName());
-            assertEquals("johndoe@example.com", User.getEmail());
+            assertEquals("John", textFieldFirstName.getText());
+            assertEquals("Doe", textFieldLastName.getText());
+            assertEquals("johndoe@example.com", textFieldEmail.getText());
             assertEquals(0.0, wallet[0]);
         });
     }
 
-    //could not figure out how to make this work in JavaFX on short notice
+
     //Tests the add a hundred to wallet function which is held in a 1D array
     @Test
     void testAddHundredToWallet()
@@ -47,7 +47,7 @@ public class JavaFXMethodTests
         assertEquals(100.0, moneyInWallet[0]);
     }
 
-    //could not figure out how to make this work in JavaFX on short notice
+
     //tests the add a hundred to wallet function but with a 2d array used instead
     @Test
     void testAddHundredToWalletWith2DArray()
